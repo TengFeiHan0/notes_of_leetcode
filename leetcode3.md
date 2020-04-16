@@ -6,15 +6,16 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        if(s.empty())
+        if(s.empty())//判断字符串是否非空
             return 0;
         int left(0), right(0), res(0), length(0);
         unordered_map<char, int> m;
         while(right < s.size()){
             char c1 = s[right];
+            //如果又一次遇见了该字符
             if(m.find(c1) != m.end() && m[c1] >=left){
-               left = m[c1] +1;
-               length = right-left;
+               left = m[c1] +1;//移到重复字符串后面
+               length = right-left;//计算长度
             }
             m[c1] = right;
             right++;
