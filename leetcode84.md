@@ -1,3 +1,4 @@
+```
 int largestRectangleArea(vector<int>& heights) {
      heights.push_back(0);
      stack<int> stk;
@@ -14,5 +15,6 @@ int largestRectangleArea(vector<int>& heights) {
      }
      return maxArea;
 }
+```
 [参考博客1](https://blog.csdn.net/Zolewit/article/details/88863970)
 [参考博客2](https://blog.csdn.net/qq_17550379/article/details/85093224)
